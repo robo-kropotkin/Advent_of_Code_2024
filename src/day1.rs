@@ -1,8 +1,5 @@
-
-
 pub mod solution {
-    use std::fs::File;
-    use std::io::{self, BufRead};
+    use crate::utils::read_lines;
 
     pub fn total_distance() {
         let data_address = "data/day1.txt";
@@ -33,12 +30,6 @@ pub mod solution {
             score += key * element;
         }
         println!("Similarity score is {score}");
-    }
-
-    fn read_lines(filename: &str) -> io::Result<io::Lines<io::BufReader<File>>> {
-        println!("{filename}");
-        let file = File::open(filename).expect("File not found!");
-        Ok(io::BufReader::new(file).lines())
     }
 
     fn create_lists(filename: &str) -> ([i32; 1000], [i32; 1000]) {
