@@ -50,6 +50,7 @@ pub mod solution {
         let mut corrected_sum = 0;
         for line in lines {
             let mut parts: Vec<i32> = line.unwrap().split(",").map(|x| x.parse::<i32>().unwrap()).collect::<Vec<i32>>();
+            let mut corrected = false;
             for i in 0..parts.len() {
                 let mut j = i + 1;
                 while j < parts.len() {
@@ -58,13 +59,16 @@ pub mod solution {
                         parts[i] = parts[j];
                         parts[j] = temp;
                         j = i + 1;
+                        corrected = true;
                     }
                     else {
                         j += 1;
                     }
                 }
             }
-            corrected_sum += parts[parts.len() / 2];
+            if corrected {
+                corrected_sum += parts[parts.len() / 2];
+            }
         }
         corrected_sum
     }
