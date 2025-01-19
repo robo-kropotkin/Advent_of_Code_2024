@@ -2,10 +2,11 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 mod utils;
 
 fn main() {
-    let day = 4;
+    let day = 5;
     if day == 1 {
         use crate::day1::solution;
         solution::total_distance();
@@ -26,4 +27,10 @@ fn main() {
         solution::part1();
         solution::part2();
     }
+    if day == 5 {
+        use crate::day5::solution;
+        solution::part1();
+        solution::part2();
+    }
+
 }
