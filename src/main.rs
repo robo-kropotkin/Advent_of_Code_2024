@@ -36,7 +36,7 @@ fn main() {
     if day == 6 {
         use crate::day6::solution;
         solution::part1();
-        // solution::part2();
+        solution::part2();
     }
 
 }
