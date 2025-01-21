@@ -5,10 +5,11 @@ mod day4;
 mod day5;
 mod day6;
 mod day7;
+mod day8;
 mod utils;
 
 fn main() {
-    let day: i32 = 7;
+    let day: i32 = 8;
     if day == 1 {
         use crate::day1::solution;
         solution::total_distance();
@@ -41,6 +42,11 @@ fn main() {
     }
     if day == 7 {
         use crate::day7::solution;
+        solution::part1();
+        solution::part2();
+    }
+    if day == 8 {
+        use crate::day8::solution;
         solution::part1();
         solution::part2();
     }
